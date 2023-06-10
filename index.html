@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Web Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/web-quiz-4/assets/style.css">
+   
+</head>
+
+<body>
+    <!-- Main outer div -->
+    <div class="outer-container">
+        <div class="inner-container">
+            <!-- Top bar section -->
+
+            <header>
+                <h1 class="headerh1">Coding Quiz Challenge!</h1>
+                <p>Press start to test your coding knowledge! This quiz is timed!
+                </p>
+            </header>
+            <button id="start">Start</button>
+
+            <!-- Quiz intro section -->
+            <div id="quiz" style="display: none;">
+                <div class="timer-container">
+                    <div class="timer-text">Time left:</div>
+                    <div class="timer"id="timer"></div>   
+
+                </div>   
+            </div>
+
+            <!-- Question screen section -->
+            
+            <div class="questions" id="questions"></div>
+                <div  class="btn-grid">
+                    <div class="choice" id="A" onclick="checkAnswer(A)"></div>
+                    <div class="choice" id="B" onclick="checkAnswer(B)"></div>
+                    <div class="choice" id="C" onclick="checkAnswer(C)"></div>
+                    <div class="choice" id="D" onclick="checkAnswer(D)"></div>
+                </div>
+                <div class="quiz-score-grouping">
+            <div class="quizscore-counter">Score:</div>
+            <div class="score" id="score">0</div>
+        </div>
+            
+            <!-- Quiz finish screen section -->
+            <div id="quiz-ss">
+                <div class="your-score">Your Score:</div>
+                <h2 id="score"></h2>
+                <div class="High-scores">
+                    <h1 id="p-scores" style="display:none;">Previous Highscores</h1>
+                    <ol id="highscores"></ol>
+                </div>
+                <form action="" id="submissionArea">
+                    <h2> Enter you initials below</h2>
+                    <div class="submission-area">
+                        <label for="initials">Initials:</label>
+                        <br>
+                        <input type="text" id="initials" value="">
+                        <br>
+                        <input type="submit" value="Submit">   
+                    </div>
+                </form>
+                
+    
+            <!-- Highscores screen section -->
+            <section class="highscore-screen" style="display: none;">
+                <h2>Highscores:</h2>
+                <ol>
+                    <li></li>
+                </ol>
+            </section>
+            <div class="timer">
+                <div class="time-text"> Time remaining:</div>
+               <div class="timer" id="timer"></div>
+            </div>
+
+            <button id="restart" class="restart-button" style="display: none;">Restart</button>
+        </div>
+
+        </div>
+
+        <!-- Bottom bar section -->
+        
+    </div>
+
+    <script src="assets /script.js" ></script>   
+</body>
+
+</html>
